@@ -54,30 +54,30 @@ switch(promotionChoice) {
     case "Queen" -> {
         chessboard[x][y].setText(pieceColor + "Q"); 
         if (pieceColor == 'W') {
-            chessboard[x][y].setIcon(setTheIcon("C:/Users/karthikeya/eclipse-workspace/Chess/src/org/chess/UI/white-queen.png"));
+            chessboard[x][y].setIcon(setTheIcon("white-queen.png"));
         } else {
-            chessboard[x][y].setIcon(setTheIcon("C:/Users/karthikeya/eclipse-workspace/Chess/src/org/chess/UI/black-queen.png"));
+            chessboard[x][y].setIcon(setTheIcon("black-queen.png"));
         }   }
     case "Rook" -> {
         chessboard[x][y].setText(pieceColor + "R");
         if (pieceColor == 'W') {
-            chessboard[x][y].setIcon(setTheIcon("C:/Users/karthikeya/eclipse-workspace/Chess/src/org/chess/UI/white-rook.png"));
+            chessboard[x][y].setIcon(setTheIcon("white-rook.png"));
         } else {
-            chessboard[x][y].setIcon(setTheIcon("C:/Users/karthikeya/eclipse-workspace/Chess/src/org/chess/UI/black-rook.png"));
+            chessboard[x][y].setIcon(setTheIcon("black-rook.png"));
         }   }
     case "Bishop" -> {
         chessboard[x][y].setText(pieceColor + "B");
         if (pieceColor == 'W') {
-            chessboard[x][y].setIcon(setTheIcon("C:/Users/karthikeya/eclipse-workspace/Chess/src/org/chess/UI/white-bishop.png"));
+            chessboard[x][y].setIcon(setTheIcon("white-bishop.png"));
         } else {
-            chessboard[x][y].setIcon(setTheIcon("C:/Users/karthikeya/eclipse-workspace/Chess/src/org/chess/UI/black-bishop.png"));
+            chessboard[x][y].setIcon(setTheIcon("black-bishop.png"));
         }   }
     case "Knight" -> {
         chessboard[x][y].setText(pieceColor + "N");
         if (pieceColor == 'W') {
-            chessboard[x][y].setIcon(setTheIcon("C:/Users/karthikeya/eclipse-workspace/Chess/src/org/chess/UI/white-knight.png"));
+            chessboard[x][y].setIcon(setTheIcon("white-knight.png"));
         } else {
-            chessboard[x][y].setIcon(setTheIcon("C:/Users/karthikeya/eclipse-workspace/Chess/src/org/chess/UI/black-knight.png"));
+            chessboard[x][y].setIcon(setTheIcon("black-knight.png"));
         }   }
 }
 }

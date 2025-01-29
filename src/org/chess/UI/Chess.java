@@ -50,51 +50,51 @@ public class Chess extends JFrame{
                 btn.setBackground((i+j)%2 == 0 ? Color.WHITE: new Color(55,155,55));
                 if(i==1){
                     btn.setText("WP");
-                    btn.setIcon(setTheIcon("C:/Users/karthikeya/eclipse-workspace/Chess/src/org/chess/UI/white-pawn.png"));
+                    btn.setIcon(setTheIcon("white-pawn.png"));
                 }
                 if(i==6){
                 btn.setText("BP");
-                btn.setIcon(setTheIcon("C:/Users/karthikeya/eclipse-workspace/Chess/src/org/chess/UI/black-pawn.png"));
+                btn.setIcon(setTheIcon("black-pawn.png"));
             }
                 if(i==0 && j==3){
                     btn.setText("WK");
-                    btn.setIcon(setTheIcon("C:/Users/karthikeya/eclipse-workspace/Chess/src/org/chess/UI/white-king.png"));
+                    btn.setIcon(setTheIcon("white-king.png"));
                 }
                 if(i==7 && j==3){
                     btn.setText("BK");
-                    btn.setIcon(setTheIcon("C:/Users/karthikeya/eclipse-workspace/Chess/src/org/chess/UI/black-king.png"));
+                    btn.setIcon(setTheIcon("black-king.png"));
                 }
                 if(i==0 && j==4){
                     btn.setText("WQ");
-                    btn.setIcon(setTheIcon("C:/Users/karthikeya/eclipse-workspace/Chess/src/org/chess/UI/white-queen.png"));
+                    btn.setIcon(setTheIcon("white-queen.png"));
                 }
                 if(i==7 && j==4){
                     btn.setText("BQ");
-                    btn.setIcon(setTheIcon("C:/Users/karthikeya/eclipse-workspace/Chess/src/org/chess/UI/black-queen.png"));
+                    btn.setIcon(setTheIcon("black-queen.png"));
                 }
                 if(i==0 && (j==0 || j==7)){
                     btn.setText("WR");
-                    btn.setIcon(setTheIcon("C:/Users/karthikeya/eclipse-workspace/Chess/src/org/chess/UI/white-rook.png"));
+                    btn.setIcon(setTheIcon("white-rook.png"));
                 }
                 if(i==7 && (j==0 || j==7)){
                     btn.setText("BR");
-                    btn.setIcon(setTheIcon("C:/Users/karthikeya/eclipse-workspace/Chess/src/org/chess/UI/black-rook.png"));
+                    btn.setIcon(setTheIcon("black-rook.png"));
                 }
                 if(i==0 && (j==1 || j==6)){
                     btn.setText("WN");
-                    btn.setIcon(setTheIcon("C:/Users/karthikeya/eclipse-workspace/Chess/src/org/chess/UI/white-knight.png"));
+                    btn.setIcon(setTheIcon("white-knight.png"));
                 }
                 if(i==7 && (j==1 || j==6)){
                     btn.setText("BN");
-                    btn.setIcon(setTheIcon("C:/Users/karthikeya/eclipse-workspace/Chess/src/org/chess/UI/black-knight.png"));
+                    btn.setIcon(setTheIcon("black-knight.png"));
                 }
                 if(i==0 && (j==2 || j==5)){
                     btn.setText("WB");
-                    btn.setIcon(setTheIcon("C:/Users/karthikeya/eclipse-workspace/Chess/src/org/chess/UI/white-bishop.png"));
+                    btn.setIcon(setTheIcon("white-bishop.png"));
                 }
                 if(i==7 && (j==2 || j==5)){
                     btn.setText("BB");
-                    btn.setIcon(setTheIcon("C:/Users/karthikeya/eclipse-workspace/Chess/src/org/chess/UI/black-bishop.png"));
+                    btn.setIcon(setTheIcon("black-bishop.png"));
                 }
                 final int i1=i;
                 final int j1=j;
@@ -173,7 +173,7 @@ public class Chess extends JFrame{
                         if (king.inCheck(chessboard)) {
                             if (king.checkForMate(chessboard)) {
                                 JOptionPane.showMessageDialog(null, (!isWhiteTurn ? "WHITE" : "BLACK") + " WON BY CHECKMATE");
-                                disableAllMoves(chessboard); // Disable all moves to end the game
+                                disableAllMoves(chessboard); 
                             }
                         } 
                     

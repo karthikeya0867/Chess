@@ -4,8 +4,6 @@ import  javax.swing.JButton;
 public class King extends Piece{
 	public boolean checkForMate(JButton[][] chessboard) {
 	    int kingX = -1, kingY = -1;
-
-	    // Locate the king
 	    for (int i = 0; i < 8; i++) {
 	        for (int j = 0; j < 8; j++) {
 	            String text = chessboard[i][j].getText();
@@ -16,18 +14,18 @@ public class King extends Piece{
 	        }
 	    }
 
-	    // Check if the king can move to any safe square
+	  
 	    for (int dx = -1; dx <= 1; dx++) {
 	        for (int dy = -1; dy <= 1; dy++) {
 	            if (dx == 0 && dy == 0) continue;
 	            int newX = kingX + dx, newY = kingY + dy;
 	            if (isInBounds(newX, newY) && isValid(kingX, kingY, newX, newY, chessboard)) {
-	                return false; // King can escape
+	                return false; 
 	            }
 	        }
 	    }
 
-	    // Check if any piece can block or capture the threat
+	  
 	    for (int i = 0; i < 8; i++) {
 	        for (int j = 0; j < 8; j++) {
 	            String piece = chessboard[i][j].getText();
@@ -46,7 +44,7 @@ public class King extends Piece{
 	                            chessboard[i][j] = chessboard[k][l];
 	                            chessboard[k][l] = temp;
 
-	                            if (!stillInCheck) return false; // A move prevents the checkmate
+	                            if (!stillInCheck) return false; 
 	                        }
 	                    }
 	                }
@@ -54,7 +52,7 @@ public class King extends Piece{
 	        }
 	    }
 
-	    return true; // Checkmate
+	    return true;
 	}
 
 
