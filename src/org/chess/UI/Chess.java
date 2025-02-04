@@ -169,22 +169,22 @@ public class Chess extends JFrame{
                             isValid=king.castling(fromX, fromY, toX, toY, chessboard);
                             }
                         }
-                       King king= new King(isWhiteTurn ? 'W' :'B');
+                       King king= new King(!isWhiteTurn ? 'W' :'B');
                         if (king.inCheck(chessboard)) {
                             if (king.checkForMate(chessboard)) {
-                                JOptionPane.showMessageDialog(null, (!isWhiteTurn ? "WHITE" : "BLACK") + " WON BY CHECKMATE");
+                                JOptionPane.showMessageDialog(null, (isWhiteTurn ? "WHITE" : "BLACK") + " WON BY CHECKMATE");
                                 disableAllMoves(chessboard); 
                             }
                         } 
                     
-                        condition: if(isValid){
+                        if(isValid){
                         holder.setText("");
                         btn.setText(selected);
-                        if(king.inCheck(chessboard)) {
-                        	JOptionPane.showMessageDialog(null,"King In Check");
+                        King playerking = new King(isWhiteTurn ? 'W' : 'B');
+                        if(playerking.inCheck(chessboard)) {
+                        	JOptionPane.showMessageDialog(null,"King Will Be in Check");
                         	holder.setText(selected);
                         	btn.setText("");
-                        	break condition;
                         }
                         holder.setIcon(null);
                         btn.setIcon(piece);
